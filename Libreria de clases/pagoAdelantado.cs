@@ -16,7 +16,7 @@ namespace Libreria_de_clases
         {
             _numero = 0;
             _montoPagar = 0.0F;
-            _porcDesc = 0.0F;
+            _porcDesc = 0.00F;
             _dias = 0;
             _numeroMeses = 0;
         }
