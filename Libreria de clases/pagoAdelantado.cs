@@ -28,6 +28,7 @@ namespace Libreria_de_clases
             _porcDesc = porcDesc;
             _dias = dias;
             _numeroMeses = numeroMeses;
+
         }
         #endregion
         #region "Propiedades"
@@ -60,6 +61,17 @@ namespace Libreria_de_clases
         }
         #endregion
         #region "Metodos"
+
+        // Pago Adelantado = monto a pagar (1 - ((% descuento * días)) / 360)
+
+        public float getPagoAdelantado()
+        {
+            float pagoAdelantado = 0;
+
+            pagoAdelantado =  _montoPagar * (1 - ((_porcDesc * _dias)) / 360);
+
+            return pagoAdelantado;
+        }
         #endregion
     }
 }
