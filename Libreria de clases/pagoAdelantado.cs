@@ -6,7 +6,7 @@ namespace Libreria_de_clases
     {
         #region "Atributos"
         private int _numero;
-        private float _montoPagar;
+        private int _montoPagar;
         private float _porcDesc;
         private int _dias;
         private int _numeroMeses;
@@ -15,13 +15,13 @@ namespace Libreria_de_clases
         public PagoAdelantado()
         {
             _numero = 0;
-            _montoPagar = 0.0F;
+            _montoPagar = 0;
             _porcDesc = 0.00F;
             _dias = 0;
             _numeroMeses = 0;
         }
 
-        public PagoAdelantado( int numero, float montoPagar, float porcDesc, int dias, int numeroMeses)
+        public PagoAdelantado( int numero, int montoPagar, float porcDesc, int dias, int numeroMeses)
         {
             _numero = numero;
             _montoPagar = montoPagar;
@@ -37,7 +37,7 @@ namespace Libreria_de_clases
             set { _numero = value; }
             get { return _numero; }
         }
-        public float MontoPagar
+        public int MontoPagar
         {
             set { _montoPagar = value; }
             get { return _montoPagar; }

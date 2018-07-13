@@ -33,15 +33,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.tb_montoPagar = new System.Windows.Forms.TextBox();
+            this.tb_descuento = new System.Windows.Forms.TextBox();
+            this.tb_nmeses = new System.Windows.Forms.TextBox();
+            this.tb_pagoAdel = new System.Windows.Forms.TextBox();
+            this.cb_dias = new System.Windows.Forms.ComboBox();
+            this.b_consultar = new System.Windows.Forms.Button();
+            this.btn_restaurar = new System.Windows.Forms.Button();
+            this.b_validar = new System.Windows.Forms.Button();
+            this.l_mensajes = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -98,86 +98,101 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Pago Adelantado";
             // 
-            // textBox1
+            // tb_montoPagar
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tb_montoPagar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_montoPagar.Location = new System.Drawing.Point(238, 36);
+            this.tb_montoPagar.Name = "tb_montoPagar";
+            this.tb_montoPagar.Size = new System.Drawing.Size(227, 20);
+            this.tb_montoPagar.TabIndex = 5;
+            this.tb_montoPagar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_montoPagar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // tb_descuento
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(97, 20);
-            this.textBox2.TabIndex = 6;
+            this.tb_descuento.Location = new System.Drawing.Point(238, 89);
+            this.tb_descuento.Name = "tb_descuento";
+            this.tb_descuento.Size = new System.Drawing.Size(97, 20);
+            this.tb_descuento.TabIndex = 6;
+            this.tb_descuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox3
+            // tb_nmeses
             // 
-            this.textBox3.Location = new System.Drawing.Point(238, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(97, 20);
-            this.textBox3.TabIndex = 7;
+            this.tb_nmeses.Location = new System.Drawing.Point(238, 198);
+            this.tb_nmeses.Name = "tb_nmeses";
+            this.tb_nmeses.Size = new System.Drawing.Size(97, 20);
+            this.tb_nmeses.TabIndex = 7;
+            this.tb_nmeses.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // tb_pagoAdel
             // 
-            this.textBox4.Location = new System.Drawing.Point(238, 261);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(227, 20);
-            this.textBox4.TabIndex = 8;
+            this.tb_pagoAdel.Enabled = false;
+            this.tb_pagoAdel.Location = new System.Drawing.Point(238, 261);
+            this.tb_pagoAdel.Name = "tb_pagoAdel";
+            this.tb_pagoAdel.Size = new System.Drawing.Size(227, 20);
+            this.tb_pagoAdel.TabIndex = 8;
+            this.tb_pagoAdel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // comboBox1
+            // cb_dias
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(235, 139);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(116, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cb_dias.AllowDrop = true;
+            this.cb_dias.FormattingEnabled = true;
+            this.cb_dias.Items.AddRange(new object[] {
+            "",
+            "30",
+            "60",
+            "90",
+            "120",
+            "180",
+            "270"});
+            this.cb_dias.Location = new System.Drawing.Point(235, 139);
+            this.cb_dias.Name = "cb_dias";
+            this.cb_dias.Size = new System.Drawing.Size(116, 21);
+            this.cb_dias.TabIndex = 9;
             // 
-            // button1
+            // b_consultar
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(14, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 49);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.b_consultar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_consultar.Location = new System.Drawing.Point(14, 331);
+            this.b_consultar.Name = "b_consultar";
+            this.b_consultar.Size = new System.Drawing.Size(137, 49);
+            this.b_consultar.TabIndex = 10;
+            this.b_consultar.Text = "Consultar";
+            this.b_consultar.UseVisualStyleBackColor = true;
+            this.b_consultar.Click += new System.EventHandler(this.b_consultar_Click);
             // 
-            // button2
+            // btn_restaurar
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(196, 331);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 49);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Restaurar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_restaurar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_restaurar.Location = new System.Drawing.Point(196, 331);
+            this.btn_restaurar.Name = "btn_restaurar";
+            this.btn_restaurar.Size = new System.Drawing.Size(137, 49);
+            this.btn_restaurar.TabIndex = 11;
+            this.btn_restaurar.Text = "Restaurar";
+            this.btn_restaurar.UseVisualStyleBackColor = true;
+            this.btn_restaurar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // b_validar
             // 
-            this.button3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(380, 331);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 49);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Validar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.b_validar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_validar.Location = new System.Drawing.Point(380, 331);
+            this.b_validar.Name = "b_validar";
+            this.b_validar.Size = new System.Drawing.Size(137, 49);
+            this.b_validar.TabIndex = 12;
+            this.b_validar.Text = "Validar";
+            this.b_validar.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // l_mensajes
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(12, 423);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 23);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Zona de Mensajes";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.l_mensajes.AutoSize = true;
+            this.l_mensajes.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_mensajes.ForeColor = System.Drawing.Color.Red;
+            this.l_mensajes.Location = new System.Drawing.Point(12, 423);
+            this.l_mensajes.Name = "l_mensajes";
+            this.l_mensajes.Size = new System.Drawing.Size(181, 23);
+            this.l_mensajes.TabIndex = 13;
+            this.l_mensajes.Text = "Zona de Mensajes";
+            this.l_mensajes.Click += new System.EventHandler(this.label6_Click);
             // 
             // Form1
             // 
@@ -185,22 +200,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(565, 517);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.l_mensajes);
+            this.Controls.Add(this.b_validar);
+            this.Controls.Add(this.btn_restaurar);
+            this.Controls.Add(this.b_consultar);
+            this.Controls.Add(this.cb_dias);
+            this.Controls.Add(this.tb_pagoAdel);
+            this.Controls.Add(this.tb_nmeses);
+            this.Controls.Add(this.tb_descuento);
+            this.Controls.Add(this.tb_montoPagar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Adelanto de Pago";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,15 +232,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tb_montoPagar;
+        private System.Windows.Forms.TextBox tb_descuento;
+        private System.Windows.Forms.TextBox tb_nmeses;
+        private System.Windows.Forms.TextBox tb_pagoAdel;
+        private System.Windows.Forms.ComboBox cb_dias;
+        private System.Windows.Forms.Button b_consultar;
+        private System.Windows.Forms.Button btn_restaurar;
+        private System.Windows.Forms.Button b_validar;
+        private System.Windows.Forms.Label l_mensajes;
     }
 }
 
